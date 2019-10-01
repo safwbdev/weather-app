@@ -16,15 +16,20 @@ class App extends React.Component {
     description: undefined,
     icon: undefined,
     error: undefined,
+    location: undefined,
   }
   getWeather = async (e) => {
     e.preventDefault();
-    const city = e.target.elements.city.value;
-    const country = e.target.elements.country.value;
+    // const city = e.target.elements.city.value;
+    // const country = e.target.elements.country.value;
+    const location = e.target.elements.location.value;
+    console.log(location);
     const units = "metric";
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=${units}&appid=${API_KEY}`);
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${units}&appid=${API_KEY}`);
+    // const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=${units}&appid=${API_KEY}`);
     const data = await api_call.json();
-    if (city && country) {
+    // if (city && country) {
+    if (location) {
       console.log(data);
       this.setState({
         temperature: data.main.temp,
