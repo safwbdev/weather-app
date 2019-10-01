@@ -2,10 +2,10 @@ import React from 'react'
 
 const Navbar = () => (
     <nav>
-        <div class="nav-wrapper blue">
-            <div class="container">
-                <a href="/" class="brand-logo">The Weatherman Can!</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <div className="nav-wrapper blue">
+            <div className="container">
+                <a href="/" className="brand-logo">The Weatherman Can!</a>
+                <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li>
                         <a href="/">
                             Home

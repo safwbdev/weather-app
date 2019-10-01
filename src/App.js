@@ -1,14 +1,13 @@
 import React from 'react';
-// import Titles from './components/Titles'
-import Form from './components/Form'
-import Weather from './components/Weather'
-import './App.scss'
-import Navbar from './components/Navbar'
+import Form from './components/Form';
+import Weather from './components/Weather';
+import Navbar from './components/Navbar';
+import './App.scss';
 
 const API_KEY = "";
 
 class App extends React.Component {
-
+  
   state = {
     city: undefined,
     country: undefined,
@@ -53,8 +52,8 @@ class App extends React.Component {
       <div>
         <Navbar />
         <div className="container section">
-          <div class="row weather">
-            <div class="col xl8 l8 m6 s12 output">
+          <div className="row weather">
+            <div className="col xl8 l8 m6 s12 output">
               <Weather
                 temperature={this.state.temperature}
                 city={this.state.city}
@@ -64,7 +63,7 @@ class App extends React.Component {
                 icon={this.state.icon}
                 error={this.state.error} />
             </div>
-            <div class="col xl4 l4 m6 s12 form">
+            <div className="col xl4 l4 m6 s12 form">
               <Form getWeather={this.getWeather} />
             </div>
           </div>
