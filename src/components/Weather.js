@@ -7,6 +7,7 @@ const Weather = props => (
         { props.humidity && <p>Humidity: {props.humidity}</p> }
         { props.description && <p>Conditions: {props.description}</p> }
         { props.error && <p>{props.error}</p> }
+        { props.icon && <p>icon: <img src={'http://openweathermap.org/img/wn/'+props.icon+'.png'} /></p> }
     </div>
 )
 
