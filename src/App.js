@@ -5,7 +5,7 @@ import Weather from './components/Weather'
 import './App.scss'
 import Navbar from './components/Navbar'
 
-const API_KEY = "13c408d1a312840b2d44606200e0015d";
+const API_KEY = "";
 
 class App extends React.Component {
 
