@@ -2,8 +2,9 @@ import React from 'react';
 import Titles from './components/Titles'
 import Form from './components/Form'
 import Weather from './components/Weather'
+import './App.scss'
 
-const API_KEY = "";
+const API_KEY = "13c408d1a312840b2d44606200e0015d";
 
 class App extends React.Component {
 
