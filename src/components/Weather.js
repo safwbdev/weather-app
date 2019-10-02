@@ -16,13 +16,14 @@ const Weather = props => (
                 </h4>
             </div>
         }
-        {/* { props.icon && 
-            <div className="col s12 icon">
-                <img src={'http://openweathermap.org/img/wn/'+props.icon+'.png'} alt={props.description}/>
-            </div> 
-        } */}
         { props.temperature && 
             <div className="col s12">Currently : {props.temperature} &#8451;</div> 
+        }
+        { props.temp_min && 
+            <div className="col s12">Min : {props.temp_min} &#8451;</div> 
+        }
+        { props.temp_max && 
+            <div className="col s12">Max : {props.temp_max} &#8451;</div> 
         }
         { props.humidity && 
             <div className="col s12">Humidity: {props.humidity}</div> 

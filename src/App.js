@@ -4,7 +4,7 @@ import Weather from './components/Weather';
 import Navbar from './components/Navbar';
 import './App.scss';
 
-const API_KEY = "";
+const API_KEY = process.env.REACT_APP_KEY;
 
 class App extends React.Component {
   
@@ -12,6 +12,8 @@ class App extends React.Component {
     city: undefined,
     country: undefined,
     temperature: undefined,
+    temp_min: undefined,
+    temp_max: undefined,
     humidity: undefined,
     description: undefined,
     icon: undefined,
@@ -29,6 +31,8 @@ class App extends React.Component {
       console.log(data);
       this.setState({
         temperature: data.main.temp,
+        temp_min: data.main.temp_min,
+        temp_max: data.main.temp_max,
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
@@ -40,6 +44,8 @@ class App extends React.Component {
     else {
       this.setState({
         temperature: undefined,
+        temp_min: undefined,
+        temp_max: undefined,
         city: undefined,
         country: undefined,
         humidity: undefined,
@@ -57,6 +63,8 @@ class App extends React.Component {
             <div className="col xl8 l8 m6 s12 output">
               <Weather
                 temperature={this.state.temperature}
+                temp_min={this.state.temp_min}
+                temp_max={this.state.temp_max}
                 city={this.state.city}
                 country={this.state.country}
                 humidity={this.state.humidity}
