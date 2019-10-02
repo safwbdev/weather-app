@@ -25,7 +25,7 @@ class App extends React.Component {
     const location = e.target.value;
     console.log(location);
     const units = "metric";
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${units}&appid=${API_KEY}`);
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${units}&appid=${API_KEY}`);
     const data = await api_call.json();
     if (location) {
       console.log(data);
