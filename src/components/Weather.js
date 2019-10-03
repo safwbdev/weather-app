@@ -5,7 +5,7 @@ const Weather = props => (
         
         { !props.city && !props.country && 
             <div className="col s12 title-icon">
-                <h4>Enter your location</h4>
+                <h4>Select a Location</h4>
             </div>
         }
         { props.city && props.country && props.icon && props.description && 
