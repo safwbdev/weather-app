@@ -23,12 +23,10 @@ class App extends React.Component {
   getWeather = async (e) => {
     e.preventDefault();
     const location = e.target.value;
-    console.log(location);
     const units = "metric";
     const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${units}&appid=${API_KEY}`);
     const data = await api_call.json();
     if (location) {
-      console.log(data);
       this.setState({
         temperature: data.main.temp,
         temp_min: data.main.temp_min,
@@ -36,6 +34,8 @@ class App extends React.Component {
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
+        pressure: data.main.pressure,
+        wind: data.wind.speed,
         description: data.weather[0].description,
         icon: data.weather[0].icon,
         error: ""
@@ -49,6 +49,8 @@ class App extends React.Component {
         city: undefined,
         country: undefined,
         humidity: undefined,
+        pressure: undefined,
+        wind: undefined,
         description: undefined,
         error: "Please Enter values"
       })
@@ -60,7 +62,10 @@ class App extends React.Component {
         <Navbar />
         <div className="container section">
           <div className="row weather">
-            <div className="col xl8 l8 m6 s12 output">
+            <div className="col xl4 l4 m6 s12 form">
+              <Form getWeather={this.getWeather} />
+            </div>
+            <div className="col xl8 l8 m6 s12 output ">
               <Weather
                 temperature={this.state.temperature}
                 temp_min={this.state.temp_min}
@@ -68,12 +73,11 @@ class App extends React.Component {
                 city={this.state.city}
                 country={this.state.country}
                 humidity={this.state.humidity}
+                pressure={this.state.pressure}
+                wind={this.state.wind}
                 description={this.state.description}
                 icon={this.state.icon}
                 error={this.state.error} />
-            </div>
-            <div className="col xl4 l4 m6 s12 form">
-              <Form getWeather={this.getWeather} />
             </div>
           </div>
         </div>

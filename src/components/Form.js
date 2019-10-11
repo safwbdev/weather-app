@@ -1,27 +1,27 @@
 import React from 'react'
 
 const locations = [
-    ['Amsterdam', 'nl'],
-    ['Bangkok', 'th'],
-    ['Hanoi','vn'],
-    ['Kuala Lumpur','my'],
-    ['London', 'uk'],
-    ['Manila','ph'],
-    ['Paris', 'fr'],
-    ['Phnom Penh','kh'],
-    ['Singapore', 'sg'],
+    ['Amsterdam', 'NL'],
+    ['Bangkok', 'TH'],
+    ['Hanoi','VN'],
+    ['Kuala Lumpur','MY'],
+    ['London', 'UK'],
+    ['Manila','PH'],
+    ['Paris', 'FR'],
+    ['Phnom Penh','KH'],
+    ['Singapore', 'SG'],
 
     
 ];
 const areaItems = locations.map((location) =>
-  <option value={[location[0],location[1]]}>{location[0]}</option>
+  <option value={[location[0],location[1]]}>{location[0]}, {location[1]}</option>
 );
 
 const Form = props => (
     <form >
         <div className="input-field col s12">
             <select name="location" defaultValue={'DEFAULT'} onChange={props.getWeather}>
-                <option value="DEFAULT" disabled>Select City</option>
+                <option value="DEFAULT" disabled>Select a location</option>
                 {areaItems}
             </select>
         </div>

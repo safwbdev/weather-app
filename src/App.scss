@@ -1,33 +1,194 @@
 body{
-    h1{
-        color: red;
-    }
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
-
 .weather{
     .output{
         padding: 0;
-
+        margin: 1rem 0;
         .title-icon{
-            padding: 0;
-
             h4{
                 margin: 0;
                 display: flex;
                 align-items: center;
+                font-size: 2.5em;
+            }
+            h5{
+                text-transform: capitalize;
+            }
+        }
+        .minmax{
+            padding: 10px 0;
+            .min{
+                color: blue;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            .max{
+                color: red;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+        }
+        .first{
+            float: left;
+            text-align: center;
+            font-size: 1.5em;
+            i{
+                margin-top: 1em;
+                font-size: 2em;
+            }
+            h4{
+                margin: 1em 0 3em 0;
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            .first{
+                float: left;
+                text-align: center;
+                font-size: 1.5em;
+                display: flex;
+                i{
+                    font-size: 2em;
+                    margin: 0.6em 0.2em 0 0;
+                }
+                h4{
+                    margin: 1em 0;
+                }
+            }
+        }
+        .weather-data{
+            background: rgba(255, 255,255,0.8);
+            border-radius: 5px;
+            float: left;
+            padding: 15px;
+        }
+        .condition{
+            background: unset;
+            border-radius: 5px;
+            margin:0;
+            float: left;
+            font-size: 1.5em;
+            padding: 5px 0;
+            .col{
+                padding: 10px;
+                span{
+                    font-weight: bold;
+                }
+                &:last-child{
+                    text-align: center;
+                }
             }
         }
     }
     .form{
-        display: flex;
-        input[type="text"]{
-            border: 1px solid red;
-            // display: flex;
-
-        }
-        
+        display: flex;        
     }
 }
-select{
-    display: block !important;
+.form{
+    select{
+        display: block !important;
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    nav .brand-logo{
+        display: block;
+        float: left;
+        width: 80%;
+    }
+    .weather{
+        .output{
+            padding: 0;
+            .weather-data{
+                background: unset;
+                border-radius: unset;
+                padding: unset;
+                .title-icon{
+                    padding: 0;
+                    h4{
+                        margin: 0;
+                        display: block;
+                        text-align: center;
+                        font-size: 4em;
+                        img{
+                            width: 30%;
+                            position: relative;
+                            top: 20px;
+                        }
+                        span{
+                            font-size: 0.6em;
+                        }
+                    }
+                    h5{
+                        text-transform: capitalize;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
+                .min{
+                    color: blue;
+                    font-size: 1.5em;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                .max{
+                    color: red;
+                    font-size: 1.5em;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                .first{
+                    background: rgba(255, 255,255,0.8);
+                    border-radius: 5px;
+                    margin: 30px 0 0 0;
+                    float: left;
+                    text-align: center;
+                    font-size: 1.5em;
+                    i{
+                        margin-top: 1em;
+                        font-size: 2em;
+                        transform: rotate(90deg);
+                    }
+                    h4{
+                        margin: 1em 0 3em 0;
+                    }
+                }
+                .condition{
+                    background: rgba(255, 255,255,0.8);
+                    border-radius: 5px;
+                    margin: 30px 0 0 0;
+                    float: left;
+                    font-size: 1.5em;
+                    padding: 5px 0;
+                    .col{
+                        padding: 10px 20px;
+                        span{
+                            font-weight: bold;
+                        }
+                        &:last-child{
+                            text-align: unset;
+                        }
+                    }
+                }
+            }  
+        }
+        .form{
+            display: block;
+            border: 1px solid #747474;
+            padding: 0 !important;
+            width: 100%;
+            .input-field{
+                padding: 0;
+                margin: 0;
+                select{
+                    text-align: center;
+                    font-size: 1.6em;
+                    height: 6vh;
+                }
+            }
+        }
+    }
 }
