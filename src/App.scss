@@ -44,7 +44,7 @@ body{
                 margin: 1em 0 3em 0;
             }
         }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 998px) {
             .first{
                 float: left;
                 text-align: center;
@@ -101,11 +101,12 @@ body{
     }
     .weather{
         .output{
-            padding: 0;
+            padding: 0 !important;
             .weather-data{
                 background: unset;
                 border-radius: unset;
                 padding: unset;
+                width: 100%;
                 .title-icon{
                     padding: 0;
                     h4{

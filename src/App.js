@@ -62,10 +62,10 @@ class App extends React.Component {
         <Navbar />
         <div className="container section">
           <div className="row weather">
-            <div className="col xl4 l4 m6 s12 form">
+            <div className="col xl4 l4 m12 s12 form">
               <Form getWeather={this.getWeather} />
             </div>
-            <div className="col xl8 l8 m6 s12 output ">
+            <div className="col xl8 l8 m12 s12 output ">
               <Weather
                 temperature={this.state.temperature}
                 temp_min={this.state.temp_min}

@@ -5,7 +5,7 @@ const Weather = props => (
         
         { !props.city && !props.country && 
             <div className="col s12 first">
-                <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+                <i className="fa fa-hand-o-left" aria-hidden="true"></i>
                 <h4>No data? Pick a location first!</h4>
             </div>
         }
@@ -26,11 +26,11 @@ const Weather = props => (
         { props.temp_min && props.temp_max &&
         <div className="col s12 minmax">
             <div className="col s6 min">
-                <i class="fa fa-chevron-down hide-on-large-only" aria-hidden="true"></i><span className="hide-on-small-only"> Low : </span>
+                <i className="fa fa-chevron-down hide-on-large-only" aria-hidden="true"></i><span className="hide-on-small-only"> Low : </span>
                 {props.temp_min} &#8451;
             </div>
             <div className="col s6 max">
-                <i class="fa fa-chevron-up hide-on-large-only" aria-hidden="true"></i><span className="hide-on-small-only"> High : </span>
+                <i className="fa fa-chevron-up hide-on-large-only" aria-hidden="true"></i><span className="hide-on-small-only"> High : </span>
                 {props.temp_max} &#8451;
             </div>
         </div>
