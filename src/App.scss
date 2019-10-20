@@ -1,10 +1,21 @@
-body{
-    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+html{
+    
+    background: skyblue;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    body{
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
+    }
 .weather{
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background: #ffffff;
     .output{
         padding: 0;
         margin: 1rem 0;
@@ -60,7 +71,7 @@ body{
             }
         }
         .weather-data{
-            background: rgba(255, 255,255,0.8);
+            // background: rgba(255, 255,255,0.8);
             border-radius: 5px;
             float: left;
             padding: 15px;
@@ -142,7 +153,7 @@ body{
                     font-weight: bold;
                 }
                 .first{
-                    background: rgba(255, 255,255,0.8);
+                    // background: rgba(255, 255,255,0.8);
                     border-radius: 5px;
                     margin: 30px 0 0 0;
                     float: left;
@@ -158,7 +169,7 @@ body{
                     }
                 }
                 .condition{
-                    background: rgba(255, 255,255,0.8);
+                    // background: rgba(255, 255,255,0.8);
                     border-radius: 5px;
                     margin: 30px 0 0 0;
                     float: left;

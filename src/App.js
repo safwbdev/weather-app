@@ -59,8 +59,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <div className="container section">
+         <div className="container section">
           <div className="row weather">
             <div className="col xl4 l4 m12 s12 form">
               <Form getWeather={this.getWeather} />
@@ -80,7 +79,7 @@ class App extends React.Component {
                 error={this.state.error} />
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     );
   }
