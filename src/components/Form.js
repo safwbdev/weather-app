@@ -17,7 +17,7 @@ const areaItems = locations.map((location, key) =>
 
 const Form = props => (
     <form >
-        <div className="input-field col xl12 l12 m12 s12">
+        <div className="input-field">
             <select name="location" defaultValue={'DEFAULT'} onChange={props.getWeather}>
                 <option value="DEFAULT" disabled>Select a location</option>
                 {areaItems}
